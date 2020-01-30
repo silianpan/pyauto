@@ -2,7 +2,7 @@
 
 from IPy import IP
 
-ip_s = raw_input('Please input an IP or net-range: ')
+ip_s = input('Please input an IP or net-range: ')
 ips = IP(ip_s)
 
 
