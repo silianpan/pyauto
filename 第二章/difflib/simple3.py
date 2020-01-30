@@ -14,6 +14,7 @@ except Exception as e:
 def readfile(filename):
     try:
         fileHandle = open(filename, 'rb')
+        # 读取分割
         text = fileHandle.read().splitlines()
         fileHandle.close()
         return text
@@ -27,8 +28,10 @@ if textfile1 == "" or textfile2 == "":
     sys.exit()
 
 
+# 调用readfile，获取分隔后的字符串
 text1_lines = readfile(textfile1)
 text2_lines = readfile(textfile2)
 
 d = difflib.HtmlDiff()
+# make_file生成对比结果
 print(d.make_file(text1_lines, text2_lines))

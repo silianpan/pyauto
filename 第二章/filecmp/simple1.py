@@ -1,11 +1,15 @@
 import filecmp
 
+# 定义左目录
 a = "/Users/panliu/personal/pyauto/第二章/filecmp/dir1"
+# 定义右目录
 b = "/Users/panliu/personal/pyauto/第二章/filecmp/dir2"
 
+# 目录比较，忽略test.py文件
 dirobj = filecmp.dircmp(a, b, ['test.py'])
 
 print("-------------------report---------------------")
+# 输出对比结果数据报表，详细说明参考filecmp类方法及属性信息
 dirobj.report()
 print("-------------report_partial_closure-----------")
 dirobj.report_partial_closure()
