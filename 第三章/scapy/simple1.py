@@ -4,7 +4,7 @@ import warnings,logging
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import traceroute
-domains = raw_input('Please input one or more IP/domain: ')
+domains = input('Please input one or more IP/domain: ')
 target =  domains.split(' ')
 dport = [80]
 if len(target) >= 1 and target[0]!='':

@@ -2,8 +2,8 @@ import pxssh
 import getpass
 try:
     s = pxssh.pxssh()
-    hostname = raw_input('hostname: ')
-    username = raw_input('username: ')
+    hostname = input('hostname: ')
+    username = input('username: ')
     password = getpass.getpass('password: ')
     s.login (hostname, username, password)
     s.sendline ('uptime')  # run a command
