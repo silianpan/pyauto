@@ -1,4 +1,4 @@
-#coding: utf-8
+#!/usr/bin/python
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
