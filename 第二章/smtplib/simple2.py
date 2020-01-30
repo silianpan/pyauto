@@ -1,11 +1,11 @@
-#coding: utf-8
+#!/usr/bin/python
 import smtplib
 from email.mime.text import MIMEText
 
-HOST = "smtp.gmail.com"
+HOST = "smtp.163.com"
 SUBJECT = u"官网流量数据报表"
-TO = "test@qq.com"
-FROM = "test@gmail.com"
+TO = "2480621579@qq.com"
+FROM = "liupan6888@163.com"
 
 msg = MIMEText("""
     <table width="800" border="0" cellspacing="0" cellpadding="4">
@@ -25,17 +25,17 @@ msg = MIMEText("""
         &nbsp;&nbsp;/login.php 5112<br>
 	</td>
       </tr>
-    </table>""","html","utf-8")
+    </table>""", "html", "utf-8")
 msg['Subject'] = SUBJECT
-msg['From']=FROM
-msg['To']=TO
+msg['From'] = FROM
+msg['To'] = TO
 try:
     server = smtplib.SMTP()
-    server.connect(HOST,"25")
-    server.starttls()
-    server.login("test@gmail.com","123456")
+    server.connect(HOST, "25")
+    # server.starttls()
+    server.login("liupan6888@163.com", "silian1878")
     server.sendmail(FROM, TO, msg.as_string())
     server.quit()
-    print "邮件发送成功！"
-except Exception, e:  
-    print "失败："+str(e) 
+    print("邮件发送成功！")
+except Exception as e:
+    print("失败："+str(e))
