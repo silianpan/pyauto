@@ -12,6 +12,7 @@ ipy = "*"
 dnspython = "*"
 pycurl = "*"
 xlsxwriter = "*"
+scapy = "*"
 
 [requires]
 python_version = "3.7"
