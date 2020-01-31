@@ -1,4 +1,4 @@
-#coding: utf-8
+#!/usr/bin/python
 import xlsxwriter
 
 
@@ -10,7 +10,7 @@ worksheet = workbook.add_worksheet()
 worksheet.set_column('A:A', 20)
 
 # Add a bold format to use to highlight cells.
-#bold = workbook.add_format({'bold': True})
+# bold = workbook.add_format({'bold': True})
 bold = workbook.add_format()
 bold.set_bold()
 
