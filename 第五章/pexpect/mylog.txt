@@ -1,0 +1,15 @@
+root@113.62.127.199's password: password
+
+Last failed login: Fri Jan 31 15:20:15 CST 2020 from 222.186.175.154 on ssh:notty
+There were 12 failed login attempts since the last successful login.
+Last login: Fri Jan 31 15:19:21 2020 from 110.188.157.43
+
+]0;root@leiwuqi2:~[?1034h[root@leiwuqi2 ~]# tar -czf /root/nginx_access.tar.gz /var/log/nginx/access.log
+tar -czf /root/nginx_access.tar.gz /var/log/nginx/access.log
+tar: Removing leading `/' from member names
+]0;root@leiwuqi2:~[root@leiwuqi2 ~]# exit
+root@113.62.127.199's password: Leiwuqi_891
+
+
+nginx_access.tar.gz                             0%    0     0.0KB/s   --:-- ETA
+nginx_access.tar.gz                           100%  131     2.6KB/s   00:00    

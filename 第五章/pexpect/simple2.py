@@ -13,10 +13,10 @@ child.sendline('bin')
 child.expect('ftp> ')
 child.sendline('get robots.txt')
 child.expect('ftp> ')
-sys.stdout.write (child.before)
+sys.stdout.write(child.before)
 print("Escape character is '^]'.\n")
-sys.stdout.write (child.after)
+sys.stdout.write(child.after)
 sys.stdout.flush()
-child.interact() # Escape character defaults to ^]
+child.interact()  # Escape character defaults to ^]
 child.sendline('bye')
 child.close()

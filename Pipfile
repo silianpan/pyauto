@@ -13,6 +13,8 @@ dnspython = "*"
 pycurl = "*"
 xlsxwriter = "*"
 scapy = "*"
+pexpect = "*"
+pxssh = "*"
 
 [requires]
 python_version = "3.7"
