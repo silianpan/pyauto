@@ -28,7 +28,7 @@ def input_versionid():
 @task
 @runs_once
 def tar_source():
-    print yellow("Creating source package...")
+    print(yellow("Creating source package..."))
     with lcd(env.project_dev_source):
         local("tar -czf %s.tar.gz ." %
               (env.project_tar_source + env.project_pack_name))
@@ -37,7 +37,7 @@ def tar_source():
 
 @task
 def put_package():
-    print yellow("Start put package...")
+    print(yellow("Start put package..."))
     with settings(warn_only=True):
         with cd(env.deploy_project_root+env.deploy_release_dir):
             run("mkdir %s" % (env.deploy_version))
@@ -59,7 +59,7 @@ def put_package():
 
 @task
 def make_symlink():
-    print yellow("update current symlink")
+    print(yellow("update current symlink"))
     env.deploy_full_path = env.deploy_project_root + \
         env.deploy_release_dir + "/"+env.deploy_version
     with settings(warn_only=True):
@@ -71,7 +71,7 @@ def make_symlink():
 
 @task
 def rollback():
-    print yellow("rollback project version")
+    print(yellow("rollback project version"))
     versionid = input_versionid()
     if versionid == '':
         abort("Project version ID error,abort!")
