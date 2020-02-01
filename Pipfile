@@ -1,6 +1,7 @@
 [[source]]
 name = "pypi"
-url = "https://pypi.org/simple"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+# url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
@@ -14,7 +15,8 @@ pycurl = "*"
 xlsxwriter = "*"
 scapy = "*"
 pexpect = "*"
-pxssh = "*"
+fabric = "*"
+paramiko = "*"
 
 [requires]
 python_version = "3.7"
