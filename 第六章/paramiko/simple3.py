@@ -2,12 +2,12 @@
 import paramiko
 import sys
 
-# 堡垒机
+# 定义业务服务器信息
 hostname = "192.168.1.21"
 username = "root"
 password = "SKJh935yft#"
 
-# 定义业务服务器信息
+# 堡垒机
 blip = "192.168.1.23"
 bluser = "root"
 blpasswd = "SKJh935yft#"
