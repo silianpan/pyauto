@@ -10,7 +10,7 @@ fab命令引用默认文件名为fabfile.py，如果使用非默认文件名称�
 fab -p password -H 192.168.1.2,192.168.1.3 -- 'uname -s'
 '''
 
-
+# @task(hosts=["my-server"])
 @task
 def host_type(c):
     # c = Connection(host='192.168.1.2', user='root',

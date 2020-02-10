@@ -17,6 +17,7 @@ scapy = "*"
 pexpect = "*"
 fabric = "*"
 paramiko = "*"
+invocations = "*"
 
 [requires]
 python_version = "3.7"

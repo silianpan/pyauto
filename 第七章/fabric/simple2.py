@@ -1,21 +1,30 @@
 #!/usr/bin/env python
-from fabric.api import *
 
-env.user = 'root'
-env.hosts = ['192.168.1.21', '192.168.1.22']
-env.password = "SKJh935yft#"
+# env.user = 'root'
+# env.hosts = ['192.168.1.21', '192.168.1.22']
+# env.password = "SKJh935yft#"
+from fabric import ThreadingGroup
+
+group = ThreadingGroup(
+    "113.62.127.198", "113.62.127.199", user="root",
+    connect_kwargs={'password': 'Leiwuqi_891'},
+)
 
 
-@runs_once
 def input_raw():
-    return prompt("please input directory name:", default="/home")
+    ret = input("please input directory name:")
+    return ret if ret else '/home'
 
 
 def worktask(dirname):
-    run("ls -l "+dirname)
+    group.run("ls -l " + dirname)
 
 
-@task
+# @task
 def go():
     getdirname = input_raw()
     worktask(getdirname)
+
+
+if __name__ == '__main__':
+    go()
