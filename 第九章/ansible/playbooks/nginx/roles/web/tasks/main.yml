@@ -1,3 +1,5 @@
+- name: ensure epel-release is at the latest version
+  yum: pkg=epel-release state=latest
 - name: ensure nginx is at the latest version
   yum: pkg=nginx state=latest
 - name: write the nginx config file
